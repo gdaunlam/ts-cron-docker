@@ -1,0 +1,12 @@
+version: '3'
+services:
+  node:
+    image: node:14
+    environment:
+      - PUID=1000
+      - PGID=1000
+    command: bash -c "cd cron && npm run start"
+    working_dir: /app
+    volumes:
+      - ./cron:/app/cron
+      - ./api:/app/api
