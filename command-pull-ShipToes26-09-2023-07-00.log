@@ -1,0 +1,45 @@
+
+> procontacto-innovak-middleware@0.0.1 command /app/middleware
+> CLI_PATH=dist/apps/command/main.js npx nestjs-command "pull:ShipToes"
+
+npm WARN config cache-min This option has been deprecated in favor of `--prefer-offline`.
+npm WARN config cache-max This option has been deprecated in favor of `--prefer-online`
+npm WARN config tmp This setting is no longer used.  npm stores temporary files in a special
+npm WARN config location in the cache, and they are managed by
+npm WARN config     [`cacache`](http://npm.im/cacache).
+npm WARN config shrinkwrap Use the --package-lock setting instead.
+npm WARN config optional Use `--omit=optional` to exclude optional dependencies, or
+npm WARN config `--include=optional` to include them.
+npm WARN config 
+npm WARN config     Default value does install optional deps unless otherwise omitted.
+Error Logger: The environment 'APP_NAME' is required
+--->undefined
+envFilePath: .env
+[[35mms-integration-innovak[39m] [[36m2023-09-26T07:00:27.424Z[39m] [[36mtraceId:2b2ffb3c-a326-4e15-b6d7-b0e83c1bc592[39m] | Type: Message | Level: [[32minfo[39m] | Content: Executing command: pull:ShipToes
+[[35mms-integration-innovak[39m] [[36m2023-09-26T07:00:27.424Z[39m] [[36mtraceId:2b2ffb3c-a326-4e15-b6d7-b0e83c1bc592[39m] | Type: Message | Level: [[32minfo[39m] | Content: Pulling All
+[[35mms-integration-innovak[39m] [[36m2023-09-26T07:00:27.424Z[39m] [[36mtraceId:2b2ffb3c-a326-4e15-b6d7-b0e83c1bc592[39m] | Type: Message | Level: [[32minfo[39m] | Content: Running ShipToesPull
+[[35mms-integration-innovak[39m] [[36m2023-09-26T07:00:27.441Z[39m] [[36mtraceId:2b2ffb3c-a326-4e15-b6d7-b0e83c1bc592[39m] | Type: Request | OriginType: external | Level: [[32minfo[39m] | Method: get | Domain: undefined | Endpoint: https://e10.innovakglobal.us/ERP102700/api/v2/odata/IBN/BaqSvc/DireccionEmbarqueSF/Data | Content: Headers: {"common":{"Accept":"application/json, text/plain, */*"},"delete":{},"get":{},"head":{},"post":{"Content-Type":"application/x-www-form-urlencoded"},"put":{"Content-Type":"application/x-www-form-urlencoded"},"patch":{"Content-Type":"application/x-www-form-urlencoded"},"x-api-key":"lGbQygRZA9X1eNvmmcKosmcSrioBNeKLFzh1Tl300WbWh","Authorization":"Basic c2FsZXNmb3JjZTpzYWxlc2ZvcmNlMjI="} Body: null 
+[[35mms-integration-innovak[39m] [[36m2023-09-26T07:00:27.486Z[39m] [[36mtraceId:2b2ffb3c-a326-4e15-b6d7-b0e83c1bc592[39m] | Type: Message | Level: [[31merror[39m] | Content: {"message":"Hostname/IP does not match certificate's altnames: Host: e10.innovakglobal.us. is not in the cert's altnames: DNS:e10.innovak.cloud, DNS:www.e10.innovak.cloud","name":"Error","stack":"Error [ERR_TLS_CERT_ALTNAME_INVALID]: Hostname/IP does not match certificate's altnames: Host: e10.innovakglobal.us. is not in the cert's altnames: DNS:e10.innovak.cloud, DNS:www.e10.innovak.cloud\n    at new NodeError (internal/errors.js:322:7)\n    at Object.checkServerIdentity (tls.js:347:12)\n    at TLSSocket.onConnectSecure (_tls_wrap.js:1525:27)\n    at TLSSocket.emit (events.js:400:28)\n    at TLSSocket._finishInit (_tls_wrap.js:937:8)\n    at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:709:12)\n    at TLSWrap.callbackTrampoline (internal/async_hooks.js:130:17)","config":{"url":"https://e10.innovakglobal.us/ERP102700/api/v2/odata/IBN/BaqSvc/DireccionEmbarqueSF/Data","method":"get","data":null,"headers":{"Accept":"application/json, text/plain, */*","x-api-key":"lGbQygRZA9X1eNvmmcKosmcSrioBNeKLFzh1Tl300WbWh","Authorization":"Basic c2FsZXNmb3JjZTpzYWxlc2ZvcmNlMjI=","User-Agent":"axios/0.21.1"},"proxy":false,"transformRequest":[null],"transformResponse":[null],"timeout":200000,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"raxConfig":{"httpMethodsToRetry":["GET","POST","PUT","DELETE"]}},"code":"ERR_TLS_CERT_ALTNAME_INVALID"}
+cli pull:ShipToes
+
+command ShipToes pull
+
+Options:
+  -h, --help     Show help                                             [boolean]
+  -v, --version  Show version number                                   [boolean]
+
+TypeError: Cannot read property 'data' of undefined
+    at Function.getAndSendShipToes (/app/middleware/dist/apps/command/main.js:2234:40)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Function.pull (/app/middleware/dist/apps/command/main.js:2219:13)
+    at async ShipToesPullCommand (/app/middleware/dist/apps/command/main.js:2178:9)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! procontacto-innovak-middleware@0.0.1 command: `CLI_PATH=dist/apps/command/main.js npx nestjs-command "pull:ShipToes"`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the procontacto-innovak-middleware@0.0.1 command script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2023-09-26T07_00_27_553Z-debug.log
